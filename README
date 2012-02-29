@@ -1,0 +1,38 @@
+linux nautilus timeslider version 0.1
+
+1. Overview
+
+Nautilus timeslider is an extension for Gnome nautilus written in python.
+This extension provide a time-scale view of snapshots created by the btrfs
+autosnap.
+
+2. Install
+
+This nautilus extention works only for root user, (as of now the btrfs cli
+does only work for the root user).
+To install this extension as root, first make sure that you have installed
+the nautilus python extension(http://projects.gnome.org/nautilus-python):
+On Fedora: # yum install nautilus-python
+On Debian/Ubuntu: # apt-get install python-nautilus
+
+After that, just run "install.sh":
+# ./install.sh
+
+You may want to try to execute "bash install.sh" or "ksh install.sh"
+if there is any problem in the above command.
+
+3. Configuration
+
+Configuration has to be done using the 'btrfs autosnap' sub-commands. See 
+btrfs autosnap --help for more info.
+
+4. Running
+
+Restart nautilus (execute 'nautilus -q' and then 'nautilus --no-desktop
+</path-to-btrfs-subvol-under-autosnap>' or 'nautilus') and you will see
+all the snapshots avaialble for the given subvol.
+
+4. Uninstall
+
+Run the uninstall shell script.
+
